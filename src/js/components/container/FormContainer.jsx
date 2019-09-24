@@ -1,14 +1,17 @@
-import React, { Component } from "react";
-import Input from "../presentational/Input.jsx";
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import Input from '../presentational/Input.jsx';
 
 class FormContainer extends Component {
   constructor() {
     super();
+
     this.state = {
-      seo_title: ""
+      seo_title: ''
     };
     this.handleChange = this.handleChange.bind(this);
   }
+
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });
   }
@@ -29,4 +32,4 @@ class FormContainer extends Component {
   }
 }
 
-export default FormContainer;
+ReactDOM.render(<FormContainer />, document.getElementById('root'));
